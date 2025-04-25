@@ -95,8 +95,34 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out'
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100ch',
+						color: 'hsl(var(--foreground))',
+						a: {
+							color: 'hsl(var(--primary))',
+							'&:hover': {
+								color: 'hsl(var(--primary) / 0.8)',
+							},
+						},
+						h1: {
+							color: 'hsl(var(--primary))',
+						},
+						h2: {
+							color: 'hsl(var(--primary))',
+						},
+						h3: {
+							color: 'hsl(var(--primary))',
+						},
+						h4: {
+							color: 'hsl(var(--primary))',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
